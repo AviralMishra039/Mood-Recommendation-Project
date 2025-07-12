@@ -1,35 +1,46 @@
 # 🎧 Spotify Mood-Based Music Recommender
 
-A machine learning app that recommends songs based on your mood using K-Means Clustering and a Spotify Top 2010–2019 dataset.
+A machine learning project that recommends Spotify songs based on your mood using unsupervised learning and audio features from the top 10 Spotify songs from 2010–2019. Built with Python, Streamlit, and KMeans clustering.
 
-## 💡 Features
+![App Preview](/images/app_screenshot.png)
 
-- 🎯 Clusters songs into 4 moods: Happy, Chill, Energetic, Sad
-- 📊 Uses valence, energy, danceability, and acousticness features
-- 🚀 Deployed using Streamlit for an interactive web experience
+[Check out the app](https://mood-recommendation-project-czkdt6drmxwdjmibfjvaru.streamlit.app/)
 
-## 🔍 Dataset
+---
 
-Used the [Top Spotify Songs from 2010–2019](https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year) dataset from Kaggle.
+## 📌 Features
 
-## 🛠 Tech Stack
+- 🎵 Clustered songs based on mood (Happy, Chill, Sad, Energetic)
+- 🤖 KMeans clustering on features like energy, valence, danceability, and acousticness
+- ⚡ Instant recommendations based on your selected mood
+- 🌐 Deployed as an interactive Streamlit web app
 
-- Python, Pandas, Scikit-learn
-- KMeans Clustering
-- Streamlit for UI
+---
 
-## 🌐 Live Demo
+## 📂 Dataset
 
-👉 [Live App](https://yourusername-streamlit-app.streamlit.app)
+- **Source**: [Top Spotify Songs 2010–2019](https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year)
+- **Columns used**: `val` (valence), `nrgy` (energy), `dnce` (danceability), `acous` (acousticness)
 
-## 📷 Preview
+---
 
-![App Screenshot](screenshot.png) <!-- optional if you add a screenshot -->
+## ⚙️ Tech Stack
 
-## ⚙️ How to Run Locally
+- **Python** 🐍
+- **Streamlit** – for building the web interface
+- **Pandas & NumPy** – for data manipulation
+- **Matplotlib & Seaborn** – for visualization
+- **Scikit-Learn** – for clustering with KMeans
 
-```bash
-git clone https://github.com/YOUR_USERNAME/spotify-mood-recommender.git
-cd spotify-mood-recommender
-pip install -r requirements.txt
-streamlit run app.py
+---
+
+## 🧠 How It Works
+
+1. The dataset is cleaned and relevant features (`val`, `nrgy`, `dnce`, `acous`) are selected.
+2. KMeans clustering groups songs into 4 clusters, representing different moods.
+3. These clusters are manually labeled based on average feature values.
+4. The user selects a mood, and songs from that cluster are recommended.
+
+---
+
+### Feel free to check out my other projects on [LinkedIn](https://www.linkedin.com/in/aviral-mishra-138237338/)
